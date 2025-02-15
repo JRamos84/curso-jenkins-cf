@@ -1,10 +1,11 @@
-pipeline{
-    agent any
-    stages{
-        stage('Verificar Docker'){
-            steps{
-                sh 'docker info'
-        }
-        
+pipeline {
+  agent { label 'agente1' }
+
+  stages {
+    stage('Vertificar Docker') {
+      steps {
+        sh 'docker info'
+      }
     }
+  }
 }
